@@ -1,5 +1,4 @@
 html 
-    
     head 
         title pug-express
         link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css'
@@ -7,6 +6,16 @@ html
     body 
         include ./nav.pug
         div.container
-            ul
-                each pr in data
-                    li= 'Nombre: ' + pr.title + ' - ' + 'Precio: ' + pr.price + ' - ' + 'Imagen: ' + pr.thumbnail
+            table.table
+                thead
+                    tr
+                        th(scope="col") Nombre
+                        th(scope="col") Precio
+                        th(scope="col") Imagen
+                tbody
+                    each pr in data
+                        tr
+                            td= pr.title
+                            td= pr.price
+                            td= pr.thumbnail
+
