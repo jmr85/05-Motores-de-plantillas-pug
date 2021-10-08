@@ -184,5 +184,11 @@
 		"title": "adidas pantalon",
 		"price": "15000",
 		"thumbnail": ""
+	},
+	{
+		"id": 32,
+		"title": "cerveza heineken",
+		"price": "123",
+		"thumbnail": ""
 	}
 ]

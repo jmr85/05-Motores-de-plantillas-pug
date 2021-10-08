@@ -9,21 +9,22 @@ html
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous")
     body 
         include ./nav.pug
-     
-        div.container-fluid
-            div.row-g-3
-                div.col-md-12
-                    form(action="/saveProduct", method="POST")
-                        div.col-md-12
-                            label(for="title", class="form-label") Title*
-                            input#title(type="text", name="title", class="form-control", required)
-                        div.col-md-12    
-                            label(for="price", class="form-label") Price*
-                            input#price(type="number", name="price", class="form-control",required)
-                        div.col-md-12    
-                            label(for="thumbnail", class="form-label") thumbnail 
-                            input#thumbnail(type="text", name="thumbnail", class="form-control")
-                        div.col-12    
-                            button(type="submit", class="btn btn-primary") Submit 
         if(saveObj)
                 small='Se ha guardado exitosamente el producto: ' + saveObj.title + ' - ' + saveObj.price + ' - ' + saveObj.thumbnail
+        else
+            div.container-fluid
+                div.row-g-3
+                    div.col-md-12
+                        form(action="/saveProduct", method="POST")
+                            div.col-md-12
+                                label(for="title", class="form-label") Title*
+                                input#title(type="text", name="title", class="form-control", required)
+                            div.col-md-12    
+                                label(for="price", class="form-label") Price*
+                                input#price(type="number", name="price", class="form-control",required)
+                            div.col-md-12    
+                                label(for="thumbnail", class="form-label") thumbnail 
+                                input#thumbnail(type="text", name="thumbnail", class="form-control")
+                            div.col-12    
+                                button(type="submit", class="btn btn-primary") Submit 
+        
