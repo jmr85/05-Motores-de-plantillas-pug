@@ -5,7 +5,7 @@ Store product in a txt file
 
 - GET -> /products **returns in the product list template**
 
-- POST -> / **returns form to load product**
+- GET -> / **returns form to load product**
 
 ## Autores ✒️
 
